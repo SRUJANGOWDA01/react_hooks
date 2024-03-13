@@ -1,12 +1,13 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 
 function Ex6() {
+  const [len,setLen] = useState(0)
   const x = useRef()
 
   const fname = useRef()
   const femail = useRef()
-  const fdob = useRef()
-  const faddress = useRef()
+  const fmsg = useRef()
+  
 
   const handler = () => {
     console.log('clicked')
@@ -24,12 +25,19 @@ function Ex6() {
     }
   }
 
-  const Submithandler = () => {
+  const submitHandler = () => {
     let data = {
       name : fname.current.value,
-      email: femail.current.value,
-      dob: fdob.current.value,
-      address: faddress.current.value
+      email: femail.current.value
+    }
+    console.log('final =', data)
+  }
+
+  const clickHandler = () => {
+    if(fmsg.current.value.length > 50) {
+       console.log(`length should not exceed 50 characters`)
+    } else {
+      setLen( fmsg.current.value.length)
     }
   }
 
@@ -65,7 +73,12 @@ function Ex6() {
                 <input type="email" name='' id='' className="form-control" />
               </div>
               <div className="form-group mt-2">
-                <button className="btn btn-primary">Submit</button>
+                <label htmlFor="msg">Enter Your Message</label>
+                <textarea name="msg" id="msg" cols="30" rows="6" ref={fmsg} onKeyUp={clickHandler} className='form-control'></textarea>
+                <strong className="text-strong" id="msgLen"> { len }</strong>
+              </div>
+              <div className="form-group mt-2">
+                <button className="btn btn-primary" onClick={submitHandler}>Submit</button>
               </div>
             </div>
           </div>
