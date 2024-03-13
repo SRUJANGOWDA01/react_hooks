@@ -29,21 +29,25 @@ function ContainerComp() {
 
         </Route>
         <Route path={`/hooks/effect`} element={<EffectComp/>}>
-            <Route path={`useEffect`} element={<Ex3/>}/>
-            <Route path={`useEffect/2`} element={<Ex5/>}/>
-            <Route path={`useLayoutEffect`} element={<Ex4/>}/>
+          <Route path={`useEffect`} element={<Ex3/>}/>
+          <Route path={`useEffect/2`} element={<Ex5/>} />
+          <Route path={`useLayoutEffect`} element={<Ex4/>}/>
         </Route>
         <Route path={`/hooks/ref`} element={<RefComp/>}>
-          <Route path={`useRef`} element={<Ex6/>}/>
+          <Route path={`useRef`} element={<Ex6/>} />
         </Route>
+       
         <Route path={`/hooks/perform`} element={<PerformComp/>}>
-          <Route path={`useCallback`} element={<Ex7/>}/>
-          <Route path={`useMemo`} element={<Ex8/>}/>
+        <Route path={`useCallback`} element={<Ex7/>}/>
+        <Route path={`useMemo`} element={<Ex8/>}/>
         </Route>
+        
         <Route path={`/hooks/context`} element={<ContextComp/>}>
-          <Route path={`useContext`} element={<Ex9/>}/>
+        <Route path={`useContext`} element={<Ex9/>}/>
+        <Route/>
         </Route>
         <Route path={`/*`} element={<Pnf/>}/>
+
     </Routes>
   )
 }

@@ -1,4 +1,3 @@
-
 let menudata = [
     {
         parent: {
@@ -7,10 +6,10 @@ let menudata = [
             subroute: [
                 {
                     path: "/hooks/state/useState",
-                    title: "useState Hook"
+                    title:"useState Hook"
                 },
                 {
-                    path: "/hooks/state/useRducer",
+                    path: "hooks/state/useReducer",
                     title: "useReducer Hook"
                 }
             ]
@@ -37,6 +36,7 @@ let menudata = [
         }
     },
     {
+        
         parent: {
             path: "/hooks/ref",
             title: "Ref Hooks",
@@ -44,11 +44,13 @@ let menudata = [
                 {
                     path: "/hooks/ref/useRef",
                     title: "useRef Hook"
-                },
+                }
             ]
         }
+
     },
     {
+         
         parent: {
             path: "/hooks/perform",
             title: "Performance Hooks",
@@ -67,7 +69,7 @@ let menudata = [
     {
         parent: {
             path: "/hooks/context",
-            title: "Context Hooks",
+            title: "context Hooks",
             subroute: [
                 {
                     path: "/hooks/context/useContext",
@@ -76,6 +78,7 @@ let menudata = [
             ]
         }
     },
+
 ]
 
 export default menudata
